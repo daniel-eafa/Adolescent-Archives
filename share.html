@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- @NOTE linking our CSS -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- @NOTE initializing firebase -->
+    <script defer src="init-firebase.js"></script>
+
+    <!-- @NOTE link our main.js AFTER we load initialize firebase -->
+    <script defer src="stories.js"></script>
+    <title>Stories</title>
+    <style>
+        
+    </style>
+</head>
+<style>
+    body{
+        background-image: url(images/background2.png);
+        background-size: cover;
+        background-repeat: repeat;
+        
+        
+        
+
+
+    }
+    #compatible{
+        color: #2c3639;
+    }
+    #compatible:hover {
+  
+    background: #2c3639;
+}
+    @media(max-width: 1000px){
+        #woman{
+            height: 100%;
+        }
+        #compatible{
+            font-size: 8px;
+            color: white;
+        }
+        
+        
+    }
+    input{
+        outline: none;
+    }
+</style>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="stories.html">Stories</a>
+        <a href="share.html">Share a Story</a>
+        <a href="about.html">About Us</a>
+        <p id = "compatible"> (there are compatibility issues on this page)</p>
+    </div>
+
+
+    <div id = "lure">
+        <h1>Would you like to be involved on our blog page? Submit a story down below on whatever topic you would like! Adolescent Archives is open to anyone and that includes you!</h1>
+        <img id = "you" src="images/you.png" width = "100px">
+    </div>
+    
+    <p id="ps">*if you would like this post to be anonymous, please leave your name blank
+        <br>
+        *blog must be 700 characters at least but we encourage much longer blogs
+    </p>
+
+
+    
+    
+
+    <div id="typing-container">
+        <form>
+                <!-- @NOTE this input has an id #username -->
+            <div class="input-container">
+                <label>Name:</label> 
+                <input maxlength = "20" width = "auto" type="text" id="username"/>
+                </div>
+                
+                <!-- @NOTE this input has an id #message -->
+                <div class="input-container" id="button-stuff">
+                    <label>Blog:</label>
+                    <textarea rows="7" minlength = "700" width = "auto" type="text" id="message" class = "paragraph"></textarea>
+                    <button id="send-btn">Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        
+</body>
+</html>

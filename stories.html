@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    body{
+        background-image: url(images/background1.png);
+        background-position: cover;
+        background-repeat: repeat-y;
+        
+        
+        
+
+
+    }
+    #all-messages div{
+        outline: 1px solid white;
+        width: 500px;
+        color: white;
+    }
+
+    div .navbar{
+        width: 100%;
+    }
+    #our-stories{
+        text-align: center;
+        color: white;
+        font-size: 100px;
+    }
+    @media(max-width: 1000px){
+
+        .navbar{
+            height: 50px;
+    
+    }
+
+    }
+    
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="stories.html">Stories</a>
+        <a href="share.html">Share a Story</a>
+        <a href="about.html">About Us</a>
+    </div>
+    <h1 id="our-stories">Our Stories</h1>        
+
+        <!-- @NOTE this is where we'll append messages -->
+        <div id="all-messages">
+            <!-- @NOTE sample message -->
+            <!-- <div class="single-message">   
+                <p class="single-message-username">andymina:</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Doloremque laboriosam dignissimos molestias ad illum odio
+                    dolor beatae dolore! Possimus laborum culpa debitis at
+                    obcaecati sit assumenda, placeat delectus reiciendis
+                    accusamus!
+                </p>
+            </div> -->
+        </div>
+    
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    
+        <!-- @NOTE initializing firebase -->
+        <script defer src="init-firebase.js"></script>
+    
+        <!-- @NOTE link our main.js AFTER we load initialize firebase -->
+        <script defer src="index.js"></script>
+        <script defer src="stories.js"></script>
+    
+</body>
+</html>
